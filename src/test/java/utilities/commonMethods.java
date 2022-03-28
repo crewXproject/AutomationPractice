@@ -336,4 +336,5 @@ public class commonMethods extends PageInitializer {
 		Faker faker = new Faker(new Locale("en-US"));
 		return "A"+faker.animal().name().trim()+faker.number().digits(2)+"$";
 	}
+
 }
