@@ -25,7 +25,7 @@ public class CRW099_Template extends commonMethods{
 		signin.createAccountBtn.click();
 
 		// for anyone who needs to use an email to REGISTER website in your test case
-		// now you can use getFakerEmail() and also getFakePassword() method
+		// now you can use getFakeEmail() and also getFakePassword() method
 		// to get new email every time when you run your test case
 
 		String email = getFakeEmail();
