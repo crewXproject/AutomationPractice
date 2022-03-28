@@ -1,5 +1,6 @@
 package utilities;
 
+import com.github.javafaker.Faker;
 import driver.Driver;
 import driver.PageInitializer;
 import org.apache.commons.io.FileUtils;
@@ -14,6 +15,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 
 public class commonMethods extends PageInitializer {
@@ -308,7 +310,7 @@ public class commonMethods extends PageInitializer {
 	/**
 	 * This Method will take a screenshot
 	 * 
-	 * @param filename
+	 * @param fileName
 	 */
 	public static void TakesScreenshot(String fileName) {
 		TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
@@ -325,4 +327,13 @@ public class commonMethods extends PageInitializer {
 		System.out.println(message);
 	}
 
+	public static String getFakeEmail() {
+		Faker faker = new Faker(new Locale("en-US"));
+		return faker.name().username().trim()+"@gmail.com";
+	}
+
+	public static String getFakePassword() {
+		Faker faker = new Faker(new Locale("en-US"));
+		return "A"+faker.animal().name().trim()+faker.number().digits(2)+"$";
+	}
 }

@@ -20,8 +20,17 @@ public class CRW099_Template extends commonMethods{
 	@Test
 	public void test() {
 		printMsg("CRW099_Template");
+		comm.signinMenu.click();
 		signin.emailInput.sendKeys(PropertiesReader.getProperty("email"));
 		signin.createAccountBtn.click();
+
+		// for anyone who needs to use an email to REGISTER website in your test case
+		// now you can use getFakerEmail() and also getFakePassword() method
+		// to get new email every time when you run your test case
+
+		String email = getFakeEmail();
+		printMsg(email);
+		printMsg(getFakePassword());
 	}
 
 	@AfterTest
