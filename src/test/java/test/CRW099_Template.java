@@ -31,6 +31,7 @@ public class CRW099_Template extends commonMethods{
 		String email = getFakeEmail();
 		printMsg(email);
 		printMsg(getFakePassword());
+
 	}
 
 	@AfterTest
