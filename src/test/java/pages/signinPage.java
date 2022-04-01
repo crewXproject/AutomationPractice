@@ -25,10 +25,5 @@ public class signinPage {
     @FindBy(id="SubmitLogin")
     public WebElement signinBtn;
 
-    @FindBy(xpath="//*[@id=\"block_top_menu\"]/ul/li[2]/a")
-    public WebElement dressLink;
-
-    @FindBy(xpath="//*[@id=\"block_top_menu\"]/ul/li[2]/ul/li[2]/a")
-    public WebElement eveningDressesLink;
 
 }
