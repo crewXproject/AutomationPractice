@@ -42,11 +42,9 @@ public class CRW014_PayByBankCheck extends commonMethods{
 		dresses.qtyInput("1");
 		dresses.sizeDropdown("S");
 		dresses.colorBox.click();
-
 		Assert.assertTrue(dresses.addToCartBtn.isEnabled());
 		dresses.addToCartBtn.click();
 		dresses.checkoutBtn.click();
-		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"block_top_menu\"]/ul/li[2]/ul/li[2]/a")));
 
 //		6.Webpage will navigate user to summary order and then user can click to proceed check out.
 		cart.summaryChkoutBtn.click();
