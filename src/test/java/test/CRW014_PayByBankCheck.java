@@ -75,4 +75,5 @@ public class CRW014_PayByBankCheck extends commonMethods{
 	public void afterTest() {
 		Driver.tearDown();
 	}
+
 }
