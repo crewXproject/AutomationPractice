@@ -12,7 +12,7 @@ import utilities.PropertiesReader;
 import utilities.commonMethods;
 
 @Listeners(ListernersTestNG.class)
-public class CRW014_PaymentFuctionality extends commonMethods{
+public class CRW014_PaymentFunctionality extends commonMethods{
 
 	@BeforeTest
 	public void launchBrowser() {
@@ -21,7 +21,7 @@ public class CRW014_PaymentFuctionality extends commonMethods{
 	}
 
 	@Test
-	public void CRW014_Test1() {
+	public void CRW014_PayByBankCheck() {
 //		2.Click on sign in menu located on the top of homepage.
 		comm.signinMenu.click();
 
