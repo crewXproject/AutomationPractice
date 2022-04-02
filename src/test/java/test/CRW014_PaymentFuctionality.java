@@ -12,7 +12,7 @@ import utilities.PropertiesReader;
 import utilities.commonMethods;
 
 @Listeners(ListernersTestNG.class)
-public class CRW014_PayByBankCheck extends commonMethods{
+public class CRW014_PaymentFuctionality extends commonMethods{
 
 	@BeforeTest
 	public void launchBrowser() {
