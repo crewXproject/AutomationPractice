@@ -2,7 +2,8 @@ package driver;
 
 import pages.*;
 
-public class PageInitializer extends Driver {
+
+public class PageInitializer extends Driver{
 
 	public static commonPage comm;
 	public static womenPage women;
