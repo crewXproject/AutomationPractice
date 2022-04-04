@@ -98,10 +98,10 @@ public class CRW014_PaymentFunctionality extends commonMethods{
 		cart.agreeChkbox.click();
 		cart.shippingChkoutBtn.click();
 
-//		9.Webpage will navigate user to  all details and payment about item : product,description,avail,unitprice,Qty and total.User click payment (pay by bank check).
+//		9.Webpage will navigate user to  all details and payment about item : product,description,avail,unitprice,Qty and total.User click payment (pay by bank wire).
 		cart.payByBankWireBtn.click();
 
-//		10.User will see all details about payment (pay by check) and then click "I confirm order".
+//		10.User will see all details about payment (pay by bank wire) and then click "I confirm order".
 		cart.iConfirmOrderBtn.click();
 
 //		11.Webpage will be display "Your order on My Store is complete".
