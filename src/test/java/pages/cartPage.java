@@ -33,8 +33,11 @@ public class cartPage {
     @FindBy(xpath="//*[@id=\"HOOK_PAYMENT\"]/div[2]/div/p/a/span")
     public WebElement payByCheckBtn;
 
-    @FindBy(xpath="//*[@id=\"product_4_16_0_664403\"]/td[2]")
-    public WebElement productDesc;
+    @FindBy(xpath="//*[@id=\"product_4_16_0_664403\"]/td[2]/p/a")
+    public WebElement printedDesc;
+
+    @FindBy(xpath="//*[@id=\"product_7_34_0_664403\"]/td[2]/p/a")
+    public WebElement chiffonDesc;
 
     @FindBy(xpath="//*[@id=\"center_column\"]/form/div/p[1]")
     public WebElement checkPaymentDesc;
@@ -43,5 +46,15 @@ public class cartPage {
     public WebElement iConfirmOrderBtn;
 
     @FindBy(xpath="//*[@id=\"center_column\"]/p[1]")
-    public WebElement orderMsg;
+    public WebElement checkMsg;
+
+    @FindBy(xpath="//*[@id=\"center_column\"]/div/p/strong")
+    public WebElement bankWireMsg;
+
+    @FindBy(xpath="//*[@id=\"home-page-tabs\"]/li[1]/a")
+    public WebElement popularLabel;
+
+    @FindBy(xpath="//*[@id=\"submitAddress\"]/span")
+    public WebElement saveBtn;
+
 }
