@@ -21,7 +21,7 @@ public class CRW099_Template extends commonMethods{
 	public void test() {
 		printMsg("CRW099_Template");
 		comm.signinMenu.click();
-		signin.emailInput.sendKeys(PropertiesReader.getProperty("email"));
+		signin.createEmailInput.sendKeys(PropertiesReader.getProperty("email"));
 		signin.createAccountBtn.click();
 
 		// for anyone who needs to use an email to REGISTER website in your test case
