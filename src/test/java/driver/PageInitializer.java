@@ -9,6 +9,7 @@ public class PageInitializer extends Driver {
 	public static cartPage cart;
 	public static dressesPage dresses;
 	public static signinPage signin;
+	public static CreateAccountPage create;
 
 	public static void initialize() {
 		comm = new commonPage();
@@ -16,5 +17,6 @@ public class PageInitializer extends Driver {
 		cart = new cartPage();
 		dresses = new dressesPage();
 		signin = new signinPage();
+		create = new CreateAccountPage();
 	}
 }
