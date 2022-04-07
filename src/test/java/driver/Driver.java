@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import utilities.Constants;
 import utilities.PropertiesReader;
@@ -14,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class Driver {
 
 	public static WebDriver driver;
+	public static WebDriverWait wait;
 
 	public static WebDriver getDriver() {
 
@@ -40,6 +42,7 @@ public class Driver {
 			// maximize
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT_TIME, TimeUnit.SECONDS);
+			wait = new WebDriverWait(driver,10);
 			PageInitializer.initialize();
 		}
 		return driver;
