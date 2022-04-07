@@ -6,11 +6,9 @@ package pages;
 	import org.openqa.selenium.support.ui.Select;
 
 	import driver.Driver;
-
 	
 	public class CreateAccountPage {
 		 public CreateAccountPage() {PageFactory.initElements(Driver.getDriver(),this);}
-		 
 		 @FindBy (xpath = "//*[@id=\"id_gender1\"]")
 		 	public WebElement genderMr;
 		 
