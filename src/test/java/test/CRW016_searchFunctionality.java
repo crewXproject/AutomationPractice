@@ -38,9 +38,7 @@ public class CRW016_searchFunctionality extends commonMethods{
         for(WebElement element : searchResult) {
           System.out.println(element.getText());
         }
-      } 
-	
-	
+	} 
 	@Test(priority = 2)
 	public void CRW016_verifySearchQTY() {
 //  2.1 In the center of page click into search field and type "printed dress".
