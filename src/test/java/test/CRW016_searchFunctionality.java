@@ -24,7 +24,6 @@ public class CRW016_searchFunctionality extends commonMethods{
 		Driver.getDriver();
 	}
 
-	
 	@Test(priority = 1)
     public void CRW016_verifySearch() {
 //  1.1 In the center of page click into search field and type "printed dress".
