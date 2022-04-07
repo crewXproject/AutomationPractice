@@ -7,6 +7,7 @@ package pages;
 
 	import driver.Driver;
 
+	
 	public class CreateAccountPage {
 		 public CreateAccountPage() {PageFactory.initElements(Driver.getDriver(),this);}
 		 
@@ -111,8 +112,5 @@ package pages;
 		 
 			
 	}
-
-
-
 
 
