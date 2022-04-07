@@ -79,6 +79,5 @@ public class dressesPage {
 
     @FindBy(xpath="//a[contains(text(),'pants')][@itemprop='url']")
     public List<WebElement> pantsSearch;
-    
-    
+        
 }
