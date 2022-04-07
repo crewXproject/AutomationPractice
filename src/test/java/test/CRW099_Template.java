@@ -18,8 +18,8 @@ public class CRW099_Template extends commonMethods{
 	}
 
 	@Test
-	public void test() {
-		printMsg("CRW099_Template");
+	public void CRW099_SigninWithValidUsername() {
+
 		comm.signinMenu.click();
 		signin.createEmailInput.sendKeys(PropertiesReader.getProperty("email"));
 		signin.createAccountBtn.click();
@@ -31,6 +31,16 @@ public class CRW099_Template extends commonMethods{
 		String email = getFakeEmail();
 		printMsg(email);
 		printMsg(getFakePassword());
+
+	}
+
+	@Test
+	public void CRW099_SigninWithInvalidUsername() {
+
+		comm.signinMenu.click();
+		signin.signinEmailInput.sendKeys(PropertiesReader.getProperty("email"));
+		signin.createAccountBtn.click();
+
 
 	}
 
