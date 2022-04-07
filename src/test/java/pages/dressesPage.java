@@ -1,6 +1,8 @@
 package pages;
 
 import driver.Driver;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -75,4 +77,8 @@ public class dressesPage {
     @FindBy(xpath="//a[starts-with(@title,'Printed')][contains(text(),'Dress')][@itemprop='url']")
     public List<WebElement> dressSearch;
 
+    @FindBy(xpath="//a[contains(text(),'pants')][@itemprop='url']")
+    public List<WebElement> pantsSearch;
+
+    
 }
