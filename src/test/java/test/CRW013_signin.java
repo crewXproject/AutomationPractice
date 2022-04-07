@@ -39,8 +39,8 @@ public class CRW013_signin  extends commonMethods{
 			
 			//4. User can see Create an account form, Now user should be able to fill in their information and then click Register button
 			create.genderMr.click();
-			create.firstnameinfoInput.sendKeys(PropertiesReader.getProperty("CRW031name"));
-			create.lastnameinfoInput.sendKeys(PropertiesReader.getProperty("CRW031lastName"));
+			create.firstnameinfoInput.sendKeys(PropertiesReader.getProperty("CRW131name"));
+			create.lastnameinfoInput.sendKeys(PropertiesReader.getProperty("CRW131lastName"));
 			create.passwordInputInfoPage.sendKeys(getFakePassword());
 			
 			create.selectdayOfBirth();
@@ -49,11 +49,11 @@ public class CRW013_signin  extends commonMethods{
 			Thread.sleep(2000);
 			create.selectyearsOfBirth();
 			
-			create.address.sendKeys(PropertiesReader.getProperty("CRW031Address"));
+			create.address.sendKeys(PropertiesReader.getProperty("CRW131Address"));
 			create.city.sendKeys(PropertiesReader.getProperty("CRW031City"));
 			create.selectstate();
-			create.zipcode.sendKeys(PropertiesReader.getProperty("CRW031Zipcode"));
-			create.mobilenumber.sendKeys(PropertiesReader.getProperty("CRW031StateMobilePhone"));
+			create.zipcode.sendKeys(PropertiesReader.getProperty("CRW131Zipcode"));
+			create.mobilenumber.sendKeys(PropertiesReader.getProperty("CRW131StateMobilePhone"));
 			
 			// 5. Web page will navigate user to My ACCOUNT page that can manage 
 			//	  all of your personal information and orders.
@@ -74,8 +74,8 @@ public class CRW013_signin  extends commonMethods{
 			Assert.assertTrue(create.AuthenticationText.isDisplayed());
 			
 			// 4. In the Already Registered section, User can enter a valid email and password in text boxes and then 
-			create.emailInputAlreadyRegis.sendKeys(PropertiesReader.getProperty("CRW031email"));
-			create.passwordInputSignPage.sendKeys(PropertiesReader.getProperty("CRW031password"));
+			create.emailInputAlreadyRegis.sendKeys(PropertiesReader.getProperty("CRW131email"));
+			create.passwordInputSignPage.sendKeys(PropertiesReader.getProperty("CRW131password"));
 			
 			// click Sign in button
 			create.SignButt.click();
@@ -97,7 +97,7 @@ public class CRW013_signin  extends commonMethods{
 					Assert.assertTrue(create.AuthenticationText.isDisplayed());
 
 			 // 4. In the Already Registered section , User can enter a valid email and invalid password in text boxes and then 
-					create.emailInputAlreadyRegis.sendKeys(PropertiesReader.getProperty("CRW031email"));
+					create.emailInputAlreadyRegis.sendKeys(PropertiesReader.getProperty("CRW131email"));
 					create.passwordInputSignPage.sendKeys(getFakePassword());
 					
 			//      click Sign in button
