@@ -24,7 +24,7 @@ public class CRW013_signin  extends commonMethods{
 		
 		
 		
-		@Test (enabled=false)
+		@Test (enabled=true)
 		public void CRW013_Test1 () throws InterruptedException   {
 			
 			
@@ -63,7 +63,7 @@ public class CRW013_signin  extends commonMethods{
 		}
 		
 		
-		@Test (enabled=false)
+		@Test (enabled=true)
 		public void CRW013_Test2 () throws InterruptedException   {
 			
 			
