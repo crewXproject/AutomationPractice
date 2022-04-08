@@ -56,7 +56,7 @@ public class CRW012_sortFunctionalityWomenSection extends commonMethods {
 		women.verifyItemSortedLowestFirst();
 	}
 	
-	@Test(enabled=false)
+	@Test(enabled=false) //Bug founded during the manual testing
 	public void sortItemByZtoA() {
 
 		// 3. Scroll down the page slowly and you view see the sort by tab.

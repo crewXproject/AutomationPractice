@@ -24,7 +24,7 @@ public class CRW013_signin  extends commonMethods{
 		
 		
 		
-		@Test (enabled=true)
+		@Test (groups= {"Smoke"})
 		public void CRW013_Test1 () throws InterruptedException   {
 			
 			
