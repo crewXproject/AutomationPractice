@@ -6,39 +6,33 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Ignore;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import driver.Driver;
 import utilities.PropertiesReader;
 import utilities.commonMethods;
 
 public class CRW015_ShoppingCartFunctinality1 extends commonMethods{
-	
-	WebDriverWait wait;
-	int i = 1;
+
 	@BeforeMethod
 	public void launchBrowser() {
 //		1.1 Open browser and type URL http://automationpractice.com/
 		Driver.getDriver();
 	}
-    @Ignore
+
 	@Test(priority = 1)
 	public void CRW015_AddItem() {
 //		1.2 Scroll down to find popular items on the homepage under the "POPULAR" label.
 //		1.3 Add every item that is priced under $50.00 to the shopping cart by clicking the "Add to cart" button.
 
 		List<WebElement> productResult = driver.findElements(By.xpath("//*[@id=\"homefeatured\"]/li/div/div[2]/div[1]"));
-
+		int i = 1;
 		int lastItem = productResult.size();
 		String priceTag;
-		
 
 		for(WebElement element : productResult ) {
 			
@@ -58,10 +52,10 @@ public class CRW015_ShoppingCartFunctinality1 extends commonMethods{
 				
 				WebElement continueShoping = driver.findElement(By.xpath("//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/span/span"));
 				System.out.println(i);
-				if(i==6) {
+				if(lastItem-i == 0) {
 					WebElement proceedChkout  = driver.findElement(By.xpath("//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a/span"));
+					proceedChkout.click();
 				}
-							
 				continueShoping.click();
 			}
 			i++;
@@ -71,22 +65,15 @@ public class CRW015_ShoppingCartFunctinality1 extends commonMethods{
 		cart.ProceedChkBtn.click();
 	}
 
-	//@AfterMethod
-	public void afterTest() {
-		Driver.tearDown();
-
-
-	}
-    @Ignore
-	@Test 
+	@Test(enabled = true)
 	   public void CRW015_AddMoreItemandDeleteItem() throws InterruptedException {
 
 //		2.1 Open browser and type URL http://automationpractice.com/
 //		2.2 Scroll down to find popular items on the homepage under the "POPULAR" label.
-    	
-		Driver.getDriver();
+
 
 //		2.3 Add the first item listed by clicking the "Add to cart" button.
+		int i = 1;
 		WebElement productImg = driver.findElement(By.xpath("//*[@id=\"homefeatured\"]/li[" + i +"]/div/div[1]/div/a[1]/img"));
 
 		Actions actions = new Actions(driver);
@@ -106,21 +93,17 @@ public class CRW015_ShoppingCartFunctinality1 extends commonMethods{
 //		2.7 Subtract the quantity of item in the cart by clicking on the "-" button in the "Qty" field one time. 
 //		2.8 Users will see the quantity of items in the "Qty" field has been subtracted.       
         cart.QtyDownBtn.click();
-      
 
-	
 	}
 
-	@Test 
+	@Test(enabled = true)
 	   public void CRW015_DeleteItem() throws InterruptedException {
 
-		
 //	    3.1 Open browser and type URL http://automationpractice.com/
 //	    3.2 Scroll down to find popular items on the homepage under the "POPULAR" label.
 		
-		Driver.getDriver();
-		
 //		3.3 Add the first item listed by clicking the "Add to cart" button.
+		int i = 1;
 		WebElement productImg = driver.findElement(By.xpath("//*[@id=\"homefeatured\"]/li[" + i +"]/div/div[1]/div/a[1]/img"));
 
 		Actions actions = new Actions(driver);
@@ -136,5 +119,11 @@ public class CRW015_ShoppingCartFunctinality1 extends commonMethods{
 //		3.5 Click the "Bin Icon" of the item in the cart to delete the item from the shopping cart.
         cart.DeleteItems.click();
 	}
-	
+
+	@AfterMethod
+	public void afterTest() {
+		Driver.tearDown();
+
+
+	}
 }
