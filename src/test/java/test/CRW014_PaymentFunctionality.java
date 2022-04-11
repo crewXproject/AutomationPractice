@@ -63,7 +63,7 @@ public class CRW014_PaymentFunctionality extends commonMethods{
 		Assert.assertEquals(cart.checkMsg.getText(),PropertiesReader.getProperty("CRW014.ordermsg"));
 	}
 
-	@Test(priority = 2)
+	//@Test(priority = 2)
 	public void CRW014_PayByBankWire() {
 //		2.Click on sign in menu located on the top of homepage.
 		comm.signinMenu.click();
@@ -81,7 +81,6 @@ public class CRW014_PaymentFunctionality extends commonMethods{
 		action.moveToElement(dresses.dressLink).build().perform();
 		dresses.summerDressesLink.click();
 		dresses.chiffonDress.click();
-		dresses.qtyInput("2");
 		wait.until(ExpectedConditions.visibilityOf(dresses.addToCartBtn));
 		dresses.addToCartBtn.click();
 		wait.until(ExpectedConditions.visibilityOf(dresses.checkoutBtn));
@@ -124,7 +123,6 @@ public class CRW014_PaymentFunctionality extends commonMethods{
 //		5.User can click "T-Shirt" button add item to the cart and click add to the cart.
 		dresses.tshirtLink.click();
 		dresses.fadeTshirt.click();
-		dresses.qtyInput("3");
 		wait.until(ExpectedConditions.visibilityOf(dresses.addToCartBtn));
 		dresses.addToCartBtn.click();
 		wait.until(ExpectedConditions.visibilityOf(dresses.checkoutBtn));

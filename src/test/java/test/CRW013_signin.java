@@ -8,26 +8,17 @@ import driver.Driver;
 import utilities.PropertiesReader;
 import utilities.commonMethods;
 
+@Test (groups= {"Smoke"})
 public class CRW013_signin  extends commonMethods{
-
-
-	
-	
-		
 
 		@BeforeTest
 		public void OpenBrowser() {
-		
 			//1.  User open browser and navigate to http://automationpractice.com/index.php
 					Driver.getDriver();
 		}
 		
-		
-		
-		@Test (groups= {"Smoke"})
+		@Test
 		public void CRW013_Test1 () throws InterruptedException   {
-			
-			
 			//2. Click on Sign in menu located on the top of homepage	
 			comm.signinMenu.click();
 			Assert.assertTrue(create.myaccountdisplay.isDisplayed());
@@ -58,14 +49,11 @@ public class CRW013_signin  extends commonMethods{
 			// 5. Web page will navigate user to My ACCOUNT page that can manage 
 			//	  all of your personal information and orders.
 			create.Registerbut.click();
-			Assert.assertTrue(create.myaccountdisplay.isDisplayed());	
-			
+			Assert.assertTrue(create.myaccountdisplay.isDisplayed());
 		}
-		
-		
+
 		@Test (enabled=true)
 		public void CRW013_Test2 () throws InterruptedException   {
-			
 			
 			// 2. Click on Sign in menu located on the top of homepage
 			// 3. Web page must navigate to Authentication page 
@@ -82,13 +70,10 @@ public class CRW013_signin  extends commonMethods{
 			
 			// 5. Web page will navigate user to My ACCOUNT page that can manage all of your personal information and orders.
 			Assert.assertTrue(create.WelcomeToYourAccountText.isDisplayed());
-			
 		}
-		
 		
 		@Test (enabled=true)
 		public void CRW013_Test3 () throws InterruptedException {
-			
 			 
 			 // 2. Click on Sign in menu located on the top of homepage
 			 // 3. Web page must navigate to Authentication page 
@@ -104,11 +89,7 @@ public class CRW013_signin  extends commonMethods{
 					create.SignButt.click();
 					
 			 // 5. Web page should be displayed unauthorized message and user will not be able to log in the web page
-					Assert.assertTrue(create.ErrorMssSigninPang.isDisplayed());	
-					
-
-			 
-			
+					Assert.assertTrue(create.ErrorMssSigninPang.isDisplayed());
 			
 		}
 		

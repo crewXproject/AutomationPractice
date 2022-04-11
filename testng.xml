@@ -1,12 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true"
-          name="/Users/weerawich/java-workspace/CrewX/src/test/java/test/CRW099_Template.java">
+    <test verbose="2" preserve-order="true" name="Regression">
         <classes>
-            <class name="test.CRW099_Template">
+            <class name="test.CRW012_sortFunctionalityWomenSection">
                 <methods>
-                    <include name="test"/>
+                    <include name="sortItemByAtoZ"/>
+                    <include name="sortByPriceLowToHigh"/>
+                    <include name="sortItemByZtoA"/>
+                    <include name="sortItemByInStock"/>
+                </methods>
+            </class>
+            <class name="test.CRW013_signin">
+                <methods>
+                    <include name="CRW013_Test1"/>
+                    <include name="CRW013_Test2"/>
+                    <include name="CRW013_Test3"/>
+                </methods>
+            </class>
+            <class name="test.CRW014_PaymentFunctionality">
+                <methods>
+                    <include name="CRW014_PayByCheck"/>
+                    <include name="CRW014_PayByCheckAndUpdateAddress"/>
+                </methods>
+            </class>
+            <class name="test.CRW015_ShoppingCartFunctinality1">
+                <methods>
+                    <include name="CRW015_AddItem"/>
+                    <include name="CRW015_AddMoreItemandDeleteItem"/>
+                    <include name="CRW015_DeleteItem"/>
+                </methods>
+            </class>
+            <class name="test.CRW016_searchFunctionality">
+                <methods>
+                    <include name="CRW016_verifySearch"/>
+                    <include name="CRW016_verifySearchQTY"/>
+                    <include name="CRW016_notListedSearch"/>
                 </methods>
             </class>
         </classes>
