@@ -17,7 +17,7 @@ public class CRW013_signin  extends commonMethods{
 					Driver.getDriver();
 		}
 		
-		@Test (enabled=false)
+		@Test
 		public void CRW013_Test1 () throws InterruptedException   {
 			//2. Click on Sign in menu located on the top of homepage	
 			comm.signinMenu.click();
@@ -52,7 +52,7 @@ public class CRW013_signin  extends commonMethods{
 			Assert.assertTrue(create.myaccountdisplay.isDisplayed());
 		}
 
-		@Test (enabled=false)
+		@Test (enabled=true)
 		public void CRW013_Test2 () throws InterruptedException   {
 			
 			// 2. Click on Sign in menu located on the top of homepage

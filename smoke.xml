@@ -3,14 +3,16 @@
 <suite name="Suite">
 	<groups>
 		<run>
-			<include name="Smoke"/>
+			<include name="Smoke"></include>
+			<!-- above line works the same way as <include name="smoke"/>-->	
 		</run>
 	</groups>
 
+
 	<test name="Test">
 		<classes>
-			<class name="test.CRW013_signin" />
+			<class name="CRW013_signin" />
 		</classes>
 	</test> <!-- Test -->
-
 </suite> <!-- Suite -->
+
