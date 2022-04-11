@@ -11,7 +11,7 @@
 
 	<test name="Test">
 		<classes>
-			<class name="CRW013_signin" />
+			<class name="test.CRW013_signin" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
