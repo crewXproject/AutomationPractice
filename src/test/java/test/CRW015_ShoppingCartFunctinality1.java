@@ -55,14 +55,15 @@ public class CRW015_ShoppingCartFunctinality1 extends commonMethods{
 				if(lastItem-i == 0) {
 					WebElement proceedChkout  = driver.findElement(By.xpath("//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a/span"));
 					proceedChkout.click();
+				}else {
+					continueShoping.click();
 				}
-				continueShoping.click();
 			}
 			i++;
 		}
 
 //		1.5 When finished adding all items with price under $50.00 to the shopping cart, click the "Proceed to checkout" button on the pop-up page to go to the cart.
-		cart.ProceedChkBtn.click();
+		cart.proceedCheckoutBtn.click();
 	}
 
 	@Test(enabled = true)
