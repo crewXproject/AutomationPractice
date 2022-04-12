@@ -63,7 +63,7 @@ public class CRW014_PaymentFunctionality extends commonMethods{
 		Assert.assertEquals(cart.checkMsg.getText(),PropertiesReader.getProperty("CRW014.ordermsg"));
 	}
 
-	//@Test(priority = 2)
+	@Test(priority = 2)
 	public void CRW014_PayByBankWire() {
 //		2.Click on sign in menu located on the top of homepage.
 		comm.signinMenu.click();
